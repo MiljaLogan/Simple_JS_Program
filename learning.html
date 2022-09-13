@@ -1,0 +1,63 @@
+<script>
+    const myArray = []; // Value cannot be changed
+
+    for (let i = 0; i < 20; i++) {
+        myArray.push(i)
+    }
+
+    myArray.forEach((index, entry) => {
+        //console.log(`This is ${index}: ${entry}`);
+    })
+    for (let j = 0; j < myArray.length; j++) {
+        console.log(`This is ${j}`);
+    }
+    const a = ["a", "v"]
+    // console.log(a.length)
+    //console.log(myArray.length);
+    // console.log(myArray);
+
+    let array = [1, 6, 9, 7, 11, 10]
+    let max = 0, secondMax = 0; thirdMax = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= max) {
+            thirdMax = secondMax;
+            secondMax = max;
+            max = array[i];
+        } else if (array[i] > secondMax) {
+            thirdMax = secondMax;
+            secondMax = array[i];
+        } else if (array[i] > thirdMax) {
+            thirdMax = array[i];
+        }
+    }
+    console.log(max + " Max");
+    console.log(secondMax + " secondMax");
+    console.log(thirdMax + " thirdMax");
+
+    const x = 9
+    const result = (x % 2 == 0) ? "even" : "odd";
+
+    console.log(`The number is ${result}.`);
+
+    const name = ["Milja", "Logan", "Paari", "Pegan", 10]
+    const values = name.includes("bhcj");
+    console.log(values);
+    const nameLength = name.length;
+    console.log(nameLength);
+    let arrayName = '';
+
+    function arrayDisplay(arrayName) {
+        for (let i = 0; i <= nameLength; i++) {
+            console.log(arrayName + " array");
+            if (name[i] == arrayName) {
+                arrayName = name[i];
+                console.log(arrayName)
+            }
+            else {
+                console.log("No name in the list")
+            }
+        }
+    }
+    arrayDisplay("Milja");
+</script>

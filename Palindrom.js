@@ -7,21 +7,9 @@ if (str === strReverse) {
     //console.log("NOT a palindrome");
 }
 
-function a() {
-    this.a = 20
-    function b() {
-        this.c = 10
-    }
-}
 
-
-function b() {
-    this.c = 10
-    console.log(this)
-}
 
 function checkPalindrome(str) {
-    this
     // find the length of the string
     const len = str.length;
     // loop through half of the string
