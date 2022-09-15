@@ -29,3 +29,5 @@ sayMyName('Milja');
 const sayMyName2 = (name) => { console.log(`Hello ${name}`) };
 sayMyName2('Aneena');
 
+//
+
