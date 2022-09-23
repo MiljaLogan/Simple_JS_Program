@@ -32,4 +32,4 @@ function bubbleSort(arr) {
 
 
 
-console.log(bubbleSort([34, 54, 65, 23, 13, 21]));
+console.log(bubbleSort([34, 54, 65, 23, 13, 340, 21, 542]));
