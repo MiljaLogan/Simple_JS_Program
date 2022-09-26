@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Template Strings!</title>
+
+<body>
+    <script>
+        const song = {
+            name: 'Dying to live',
+            artist: 'Tupac',
+            featuring: 'Biggie Smalls'
+        };
+        const markup = `
+        <div class="songs">
+            <p>
+                ${song.name} - ${song.artist}
+                ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+            </p>
+        </div>
+        `
+        document.body.innerHTML = markup;
+    </script>
+</body>
+
+</html>
