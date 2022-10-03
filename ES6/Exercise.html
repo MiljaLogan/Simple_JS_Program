@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <ul>
+        <li data-time="3:23">Flexbox Video</li>
+        <li data-time="4:34">Flexbox Video</li>
+        <li data-time="6:56">Flexbox Video</li>
+        <li data-time="9:43">Redux Video</li>
+        <li data-time="5:17">Flexbox Video</li>
+        <li data-time="4:40">Flexbox Video</li>
+        <li data-time="7:58">Redux Video</li>
+        <li data-time="10:34">Flexbox Video</li>
+        <li data-time="11:51">Redux Video</li>
+        <li data-time="8:34">Flexbox Video</li>
+        <li data-time="1:45">Flexbox Video</li>
+        <li data-time="5:55">Redux Video</li>
+        <li data-time="2:45">Redux Video</li>
+    </ul>
+    <script>
+        //select all the list items on the page and covert to array
+        const items = Array.from(document.querySelectorAll('[data-time]'));
+        console.log(items);
+
+        //filter for only the elements that contain the word 'Flexbox'
+        const filtered = items.filter(item => item.textContent.includes('Flexbox'))
+
+            //map don to a list of time strings
+            .map(item => item.dataset.time) //data-time
+            //map to an array of seconds
+            .map(timecode => {
+                const parts = timecode.split(':').map(part => parseFloat(part));
+
+                return (parts[0] * 60) + parts[1];
+                console.log(parts);
+            })
+            .reduce((runningTotal, seconds) => runningTotal + seconds, 0)
+        console.log(filtered);
+    </script>
+</body>
+
+</html>
