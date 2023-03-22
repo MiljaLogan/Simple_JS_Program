@@ -1,0 +1,40 @@
+h1[class=subtile] {
+    color: blue;
+}
+
+h1:hover {
+    background-color: red;
+    color: green;
+}
+
+/*
+h1:first-child {
+    color: brown;
+}*/
+
+h1[class~=article-subtile] {
+    background-color: yellow;
+    color: purple;
+}
+
+.container {
+    background-color: rgb(211, 38, 38);
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+
+.cojntainer-item {
+    background-color: rgb(104, 143, 60);
+    color: rgb(229, 221, 217);
+    text-align: center;
+    font-size: 25pt;
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
