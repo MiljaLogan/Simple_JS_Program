@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring!</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            first: 'Milja',
+            last: 'Bos',
+            country: 'Canada',
+            city: 'Hamilton',
+            twitter: '@Miljabos'
+        };
+
+        const { first, last, twitter } = person;
+
+        const Milja = {
+            first: 'Milja',
+            last: 'Bos',
+            links: {
+                social: {
+                    twitter: 'https://twitter.com/Miljalogan',
+                    facebook: 'https://facebook.com/Miljalogan.developer',
+                },
+                web: {
+                    blog: 'https://Miljalogan.com'
+                }
+            }
+        };
+
+        const { twitter: tweet, facebook: fb } = Milja.links.social;
+
+        const settings = { width: 300, color: 'black' }  // height, fontSize
+        const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+
+    </script>
+</body>
+
+</html>
